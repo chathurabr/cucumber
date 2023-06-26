@@ -1,4 +1,4 @@
-Feature: Data Management Application - UI Specs
+Feature: Data Management Application - (001 UI Spec 001A - Home page)
 
   Scenario: Home page functionality
     Given I am on the home page
@@ -16,14 +16,3 @@ Feature: Data Management Application - UI Specs
     Given I am on the home page
     When I click on the navigate to support page button
     Then I should be redirected to the support page
-
-#Feature: Data Management Application - Support Page
-#
-#  Scenario: View one-time and monthly support options
-#    Given I am on the support page
-#    Then I should see the options for one-time support
-#    And I should see the options for monthly support
-
-#  Scenario: Upgrade details
-#    Given I am on the support page
-#    Then I should be provided with upgrade details
