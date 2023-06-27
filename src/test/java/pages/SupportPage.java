@@ -18,6 +18,8 @@ public class SupportPage {
     private final By supportMonthly = By.cssSelector("label[for='supportRecurring']");
     private final By btnUpgrade = By.cssSelector("#trigger-pro");
     private final By upgradeText = By.cssSelector("div[class='container'] h2:nth-child(1)");
+    private final By lblEmail = By.cssSelector("label[for='mce-EMAIL']");
+
 
 
     public SupportPage(WebDriver driver){
@@ -41,13 +43,13 @@ public class SupportPage {
 
     public void clickOnUpgrade(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement button = driver.findElement(btnUpgrade);
-        js.executeScript("arguments[0].scrollIntoView();", button);
-        button.click();
+        WebElement bottom = driver.findElement(By.cssSelector("p[class='t-center']"));
+        js.executeScript("arguments[0].scrollIntoView();", bottom);
+        driver.findElement(btnUpgrade).click();
     }
 
     public String getUpgradeText(){
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(upgradeText)));
-        return driver.findElement(upgradeText).getText();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(lblEmail)));
+        return driver.findElement(lblEmail).getText();
     }
 }

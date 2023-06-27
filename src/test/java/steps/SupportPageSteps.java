@@ -46,6 +46,6 @@ public class SupportPageSteps {
     @Then("I should be provided with upgrade details")
     public void iShouldBeProvidedWithUpgradeDetails() {
         supportPage.clickOnUpgrade();
-        Assert.assertEquals(supportPage.getUpgradeText(),"Looking for pro features?");
+        Assert.assertEquals(supportPage.getUpgradeText(),"Email Address");
     }
 }
